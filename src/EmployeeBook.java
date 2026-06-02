@@ -99,7 +99,20 @@ public class EmployeeBook {
             i++;
         }
     }
-
+    public boolean contains(Employee emp) {
+        for (Employee e : employees) {
+            if (e == null) break;
+            if (e.equals(emp)) return true;
+        }
+        return false;
+    }
+    public Employee getById(int id) {
+        for (Employee e : employees) {
+            if (e == null) break;
+            if (e.getId() == id) return e;
+        }
+        return null;
+    }
 
     // Добавить сотрудника
     public boolean addEmployee (Employee employee) {
